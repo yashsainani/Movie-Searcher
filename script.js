@@ -4,7 +4,7 @@ const apiKey = 'ad2de5fa';
 async function showMovies() {
     try {
         let search = input.value;
-        const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${search}&type=movie&page=1`);
+        const res = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${search}&type=movie&page=1`);
         if (!res.ok) throw new Error("Error in fetching data");
         const data = await res.json();
         console.log(data);
